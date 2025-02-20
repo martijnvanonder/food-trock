@@ -3,7 +3,6 @@
 :root {
   --text-color: #333; 
   --background-color: #f8f9fa; 
-
   --accent-color: #B1E5F2;
 }
 
@@ -25,12 +24,10 @@ body > * {
   padding: 0 20px;
 }
 
-
-
 section.hero {
   background-color: var(--accent-color);
   padding: 20px;
-
+  
   img {
     padding-top: 15px;
     width: 100%;

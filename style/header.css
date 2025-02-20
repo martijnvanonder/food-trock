@@ -1,6 +1,11 @@
+:root {
+  --text-color: #333; 
+  --background-color: #f8f9fa; 
+}
+
 nav {
-  background-color: #333;
-  color: white;
+  background-color: var(--text-color);
+  color: var(--background-color);
   padding: 20px;
   
   .container {
@@ -22,6 +27,15 @@ nav {
     padding-top: 20px;
     transition: 0.4s;
 
+    a {
+      color: var(--background-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--background-color);
+      }
+    }
+    
     li {
       padding: 10px;
       border-bottom: 1px solid rgb(160, 160, 160);

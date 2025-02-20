@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+  --text-color: #333; 
+  --background-color: #f8f9fa; 
+  --accent-color: #B1E5F2;
+}
 
 * {
   padding: 0;
@@ -8,7 +13,11 @@
 }
 
 body {
-  font-family: Roboto;
+  color: var(--text-color); 
+  background-color: var(--background-color); 
+  height: 100vh; 
+  font-family: 'Roboto';
+  line-height: 1.6;
 }
 
 section.allergenen {
@@ -19,20 +28,36 @@ main.gerechten {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  
+  gap: 20px;
+  background-color: var(--accent-color);
+
+  font-size: 0.9em;
+
   .gerecht {
     display: flex;
     flex-direction: column;
-    
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px#333;
+    padding-bottom: 5px;
+
     &>* {
-      padding: 0 7px;
+      padding: 0 10px;
     }
 
     .gerecht-foto {
       height: 120px;
       background-size: cover;
-      border-radius: 10px 10px 0 0; 
+      border-radius: 10px 10px 0 0;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      &>img {
+        height: 20px;
+        aspect-ratio: 1;
+      }
     }
 
     h4 {
