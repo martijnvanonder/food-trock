@@ -1,6 +1,7 @@
 nav {
   background-color: #333;
   color: white;
+  padding: 20px;
   
   .container {
     display: flex;
@@ -40,5 +41,3 @@ nav {
     color: white;
   }
 }
-  
-  

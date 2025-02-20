@@ -25,25 +25,7 @@ body > * {
   padding: 0 20px;
 }
 
-nav {
-  padding: 20px;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  img {
-    height: 70px;
-  }
-
-  ul {
-    list-style-type: none;
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
-  }
-}
 
 section.hero {
   background-color: var(--accent-color);
