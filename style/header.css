@@ -1,0 +1,44 @@
+nav {
+  background-color: #333;
+  color: white;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  img {
+    height: 40px;
+  }
+
+  .menu {
+    display: none;
+    list-style: none;
+    background: #333;
+    color: white;
+    width: 100%;
+    padding-top: 20px;
+    transition: 0.4s;
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid rgb(160, 160, 160);
+      text-align: center;
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
+
+  .hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+  }
+}
+  
+  
