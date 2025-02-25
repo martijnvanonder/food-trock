@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
   --text-color: #333; 
   --background-color: #f8f9fa; 
-  --link-color: #007bff; 
-  --hover-link-color: #0056b3; 
+  --accent-color: #B1E5F2;
 }
 
 * {
@@ -19,40 +20,69 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, p {
-  margin-bottom: 1rem;
+body > * {
+  padding: 0 20px;
 }
 
-a {
-  color: var(--link-color); 
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-
-a:hover {
-  color: var(--hover-link-color); 
-}
-
-.container {
-  width: 90%;
-}
-
-nav {
+section.hero {
+  background-color: var(--accent-color);
   padding: 20px;
-
-  .container {
-    display: flex;
-    justify-content: space-between;
+  
+  h1 {
+    font-size: 3em;
   }
 
   img {
-    height: 70px;
+    padding-top: 15px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+main.intro {
+  text-align: center;
+  margin: 20px 0;
+
+  hr {
+    margin: 20px 10px;
+  }
+}
+
+section.divider {
+  padding: 0;
+
+  .background-image {
+    height: 300px;
+    background-image: url(../images/divider.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: -400px;
+  }
+}
+
+section.gerechten {
+  height: 500px;
+  background-color: gray;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background-color: #333;
+  padding: 30px 20px;
+
+  a {
+    color: var(--background-color);
+    text-decoration: none;
   }
 
-  ul {
-    list-style-type: none;
-    width: 200px;
+  .left {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    img {
+      width: 50%;
+    }
   }
 }
