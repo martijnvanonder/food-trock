@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Food Trock</title>
   <link rel="stylesheet" href="style/foodCard.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style/header.css">
+  <script src="script/header.js" async></script>
 </head>
-
 <body>
+  <nav>
+    <div class="container">
+      <img src="images/logo.png" alt="logo">
+
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="producten.html">Producten</a></li>
+      <li><a href="#">Nog niks</a></li>
+    </ul>
+  </nav>
   <section class="gerechten">
     <div class="card">
       <div class="gerecht loempia">
