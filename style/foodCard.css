@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html{
+  background-color: #333;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box
 }
 
-body { font-family: vedana;}
+body { font-family: roboto; font-size: 0.8em;}
 
 .gerechten {
   display: grid;
@@ -21,6 +25,7 @@ body { font-family: vedana;}
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .titel, .omschrijving { padding: 5px; text-align: start; }
 
@@ -45,9 +50,10 @@ body { font-family: vedana;}
   align-self: flex-start;
 }
 #toevoegen {
-  background: black;
-  color: white;
+  background: rgb(40, 205, 232);
+  color: black;
   padding: 3px 6px;
+  font-weight: bold;
   margin-bottom: 3px;
   border-radius: 10px;
   width: calc(100% - 5px);
@@ -63,22 +69,53 @@ body { font-family: vedana;}
   width: 20px;
   border-radius: 50%;
 }
+#toonMeer{
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.loempia { background-image: url(../images/gerechten/loempia.jpg); }
+.vegetarische-loempia { background-image: url(../images/gerechten/vegetarische\ loempias.jpg);}
+.banh-mi { background-image: url(../images/gerechten/banh-mi.jpg);}
+.sate-kip { background-image: url(../images/gerechten/sateKip.jpg);}
+.pho-bo { background-image: url(../images/gerechten/pho-bo.jpg);}
+.bao-bun-varken { background-image: url(../images/gerechten/bao-bun-varken.jpg);}
+.katsu-chicken-curry { background-image: url(../images/gerechten/katsu-curry.jpg);}
+.pad-thai-garnalen { background-image: url(../images/gerechten/pad-thai.jpg);}
+.kimchi-fried-rice { background-image: url(../images/gerechten/kimchi.jpg);}
+.gado-gado { background-image: url(../images/gerechten/gadoGado.jpg);}
+.takoyaki { background-image: url(../images/gerechten/takoyaki.webp);}
+.fried-chicken { background-image: url(../images/gerechten/fried-chicken.jpg);}
+.tofu-bowl { background-image: url(../images/gerechten/tofu-bowl.jpg);}
+.yakitori-spiesjes { background-image: url(../images/gerechten/yakitori-spiesjes.jpg);}
+.rendang { background-image: url(../images/gerechten/rendang.webp);}
+.dumplings-kip { background-image: url(../images/gerechten/gyoza-kip.jpg);}
+.okonomiyaki { background-image: url(../images/gerechten/Okonomiyaki.jpg);}
+.zoete-aardappel { background-image: url(../images/gerechten/zoete-aardappel.webp);}
+.mango-sticky { background-image: url(../images/gerechten/Mango\ Sticky\ Rice.jpg);}
+.bubble-tea { background-image: url(../images/gerechten/milkybobatea_thumbnail.jpg);}
 
-.loempia { background-image: url(../images/loempia.jpg); }
-
-.ei { background-image: url(../allergenen/ei.png); }
-.gluten { background-image: url(../allergenen/gluten.png); }
-.lupine { background-image: url(../allergenen/lupine.png); }
-.melk { background-image: url(../allergenen/melk.png); }
-.mosterd { background-image: url(../allergenen/mosterd.png); }
-.noten { background-image: url(../allergenen/noten.png); }
-.pinda { background-image: url(../allergenen/pinda.png); }
-.schaaldieren { background-image: url(../allergenen/schaaldieren.png); }
-.selderij { background-image: url(../allergenen/selderij.png); }
-.sesam { background-image: url(../allergenen/sesamzaad.png); }
-.soja { background-image: url(../allergenen/soja.png); }
-.vis { background-image: url(../allergenen/vis.png); }
+.ei { background-image: url(../images/allergenen/ei.png); }
+.gluten { background-image: url(../images/allergenen/gluten.png); }
+.lupine { background-image: url(../images/allergenen/lupine.png); }
+.melk { background-image: url(../images/allergenen/melk.png); }
+.mosterd { background-image: url(../images/allergenen/mosterd.png); }
+.noten { background-image: url(../images/allergenen/noten.png); }
+.pinda { background-image: url(../images/allergenen/pinda.png); }
+.schaaldieren { background-image: url(../images/allergenen/schaaldieren.png); }
+.selderij { background-image: url(../images/allergenen/selderij.png); }
+.sesam { background-image: url(../images/allergenen/sesamzaad.png); }
+.soja { background-image: url(../images/allergenen/soja.png); }
+.vis { background-image: url(../images/allergenen/vis.png); }
 
 .extra {
   display: none;
+}
+.toonExtra{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: lightblue;
 }
