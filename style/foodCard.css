@@ -119,3 +119,9 @@ body { font-family: roboto; font-size: 0.8em;}
   width: 100%;
   background-color: lightblue;
 }
+
+@media screen and (min-width: 900px) {
+  .gerechten {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
