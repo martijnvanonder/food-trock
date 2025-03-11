@@ -8,13 +8,17 @@ html{
   box-sizing: border-box
 }
 
-body { font-family: roboto;}
-body:not('nav') {font-size: 0.8em;}
+body { font-family: roboto;
+  background-color: lightblue;
+}
+
+body:not('nav') {
+  font-size: 0.8em;
+}
 
 .gerechten {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: lightblue;
   height: 100%;
   padding: 15px;
   gap: 20px;
@@ -50,7 +54,7 @@ body:not('nav') {font-size: 0.8em;}
   box-shadow: 0 0 5px rgba(0, 0, 0, 1);
   align-self: flex-start;
 }
-#toevoegen {
+.toevoegen {
   background: rgb(40, 205, 232);
   color: black;
   padding: 3px 6px;
@@ -119,6 +123,42 @@ body:not('nav') {font-size: 0.8em;}
   justify-content: center;
   width: 100%;
   background-color: lightblue;
+}
+
+hr {
+  margin: 20px;
+}
+
+.order {
+  padding: 0 20px;
+
+  .selected-items {
+    min-height: 300px;
+    border-right: 1px solid black;
+  }
+
+  .items-list {
+    list-style-type: none;
+    
+    li {
+      a {
+        background: none !important;
+        text-decoration: none;
+
+        &:active {
+          color: black;
+          user-select: none;
+        }
+      }
+
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .prijs {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 900px) {
