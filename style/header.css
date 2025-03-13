@@ -3,12 +3,17 @@
   --background-color: #f8f9fa; 
 }
 
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 nav {
   background-color: var(--text-color);
   color: var(--background-color);
-  padding: 20px;
+  padding: 20px 0;
   
-  .container {
+  .header-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
