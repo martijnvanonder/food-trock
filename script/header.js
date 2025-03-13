@@ -1,6 +1,10 @@
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
+const input = document.querySelector('#menu-toggle');
+const sidebar = document.querySelector('.sidebar');
 
-  menu.style.top = menu.style.top
-}
+input.addEventListener('change', function() {
+  if (this.checked) {
+    sidebar.classList.add('is-active')
+  } else {
+    sidebar.classList.remove('is-active')
+  }
+});

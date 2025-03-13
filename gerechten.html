@@ -11,17 +11,25 @@
   <script src="script/addItem.js" async></script>
 </head>
 <body>
-  <nav>
-    <div class="container header-container">
-      <img src="images/logo.png" alt="logo">
-
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <header>
+    <div class="background-color">
+      <div class="container">
+        <img src="images/logo.png" alt="logo food-trock">
+        
+        <div class="hamburger-menu-div">
+          <label class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle"/>
+          </label>
+        </div>
+      </div>
+      <nav class="sidebar container">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="gerechten.html">GERECHTEN</a></li>
+        </ul>
+      </nav>  
     </div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gerechten.html">Gerechten</a></li>
-    </ul>
-  </nav>
+  </header>
 
   <section class="gerechten-titel">
     <h1>Gerechten</h1>

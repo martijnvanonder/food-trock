@@ -20,13 +20,8 @@ body {
   line-height: 1.6;
 }
 
-body > * {
-  padding: 0 20px;
-}
-
 section.hero {
   background-color: var(--accent-color);
-  padding: 20px;
   
   h1 {
     font-size: 3em;
