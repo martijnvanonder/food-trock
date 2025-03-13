@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --background-orders: #aaa;
+}
+
+html {
+  background-color: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: roboto;
+  background-color: lightblue;
+}
+
+body:not("nav") {
+  font-size: 0.8em;
+}
+
+input, #toonMeer {
+  border: none;
+
+  &:focus {
+    border: none;
+  }
+}
+
+section.gerechten-titel h1 {
+  font-weight: 400;
+  font-size: 4.5em;
+  text-align: center;
+  margin: 20px 0 ;
+}
+
+.gerechten {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  gap: 20px;
+  margin: 30px auto;
+}
+
+.card {
+  min-width: 0;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .titel,
+  .omschrijving {
+    padding: 6px 10px;
+    text-align: start;
+  }
+
+  .titel {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-top: 4px;
+  }
+
+  .gerecht {
+    display: flex;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+
+    .prijs {
+      color: black;
+      background-color: white;
+      padding: 5px 7px;
+      border-radius: 50px;
+      box-shadow: 0 0 10px black;
+      align-self: flex-start;
+      white-space: nowrap;
+    }
+
+    .allergenen {
+      gap: 7px;
+      display: inline-flex;
+    }
+
+    .allergie {
+      background-position: center;
+      background-size: cover;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+    }
+  }
+
+  .toevoegen {
+    background-color: rgb(108, 205, 237);
+    color: black;
+    padding: 3px 6px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 10px;
+    width: calc(100% - 10px);
+    padding: 5px;
+
+    &:active {
+      background-color: rgb(79, 190, 228);
+    }
+  }
+}
+
+#toonMeer {
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 0 30px;
+}
+
+.loempia {
+  background-image: url(../images/gerechten/loempia.jpg);
+}
+.vegetarische-loempia {
+  background-image: url(../images/gerechten/vegetarische\ loempias.jpg);
+}
+.banh-mi {
+  background-image: url(../images/gerechten/banh-mi.jpg);
+}
+.sate-kip {
+  background-image: url(../images/gerechten/sateKip.jpg);
+}
+.pho-bo {
+  background-image: url(../images/gerechten/pho-bo.jpg);
+}
+.bao-bun-varken {
+  background-image: url(../images/gerechten/bao-bun-varken.jpg);
+}
+.katsu-chicken-curry {
+  background-image: url(../images/gerechten/katsu-curry.jpg);
+}
+.pad-thai-garnalen {
+  background-image: url(../images/gerechten/pad-thai.jpg);
+}
+.kimchi-fried-rice {
+  background-image: url(../images/gerechten/kimchi.jpg);
+}
+.gado-gado {
+  background-image: url(../images/gerechten/gadoGado.jpg);
+}
+.takoyaki {
+  background-image: url(../images/gerechten/takoyaki.webp);
+}
+.fried-chicken {
+  background-image: url(../images/gerechten/fried-chicken.jpg);
+}
+.tofu-bowl {
+  background-image: url(../images/gerechten/tofu-bowl.jpg);
+}
+.yakitori-spiesjes {
+  background-image: url(../images/gerechten/yakitori-spiesjes.jpg);
+}
+.rendang {
+  background-image: url(../images/gerechten/rendang.webp);
+}
+.dumplings-kip {
+  background-image: url(../images/gerechten/gyoza-kip.jpg);
+}
+.okonomiyaki {
+  background-image: url(../images/gerechten/Okonomiyaki.jpg);
+}
+.zoete-aardappel {
+  background-image: url(../images/gerechten/zoete-aardappel.webp);
+}
+.mango-sticky {
+  background-image: url(../images/gerechten/Mango\ Sticky\ Rice.jpg);
+}
+.bubble-tea {
+  background-image: url(../images/gerechten/milkybobatea_thumbnail.jpg);
+}
+
+.ei {
+  background-image: url(../images/allergenen/ei.png);
+}
+.gluten {
+  background-image: url(../images/allergenen/gluten.png);
+}
+.lupine {
+  background-image: url(../images/allergenen/lupine.png);
+}
+.melk {
+  background-image: url(../images/allergenen/melk.png);
+}
+.mosterd {
+  background-image: url(../images/allergenen/mosterd.png);
+}
+.noten {
+  background-image: url(../images/allergenen/noten.png);
+}
+.pinda {
+  background-image: url(../images/allergenen/pinda.png);
+}
+.schaaldieren {
+  background-image: url(../images/allergenen/schaaldieren.png);
+}
+.selderij {
+  background-image: url(../images/allergenen/selderij.png);
+}
+.sesam {
+  background-image: url(../images/allergenen/sesamzaad.png);
+}
+.soja {
+  background-image: url(../images/allergenen/soja.png);
+}
+.vis {
+  background-image: url(../images/allergenen/vis.png);
+}
+
+.extra {
+  display: none;
+}
+
+.toonExtra {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: lightblue;
+  margin: 25px 0;
+}
+
+.order {
+  background-color: var(--background-orders);
+  padding: 40px 0 0;
+  padding-bottom: 30px;
+
+  .selected-items {
+    min-height: 200px;
+  }
+
+  .items-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 5px;
+
+    td,
+    th {
+      background-color: var(--background-orders);
+    }
+
+    tr > td:first-child {
+      display: flex;
+      justify-content: space-between;
+
+      & > span {
+        width: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+    }
+
+    th {
+      text-align: start;
+      &:first-child {
+        width: 70px;
+      }
+
+      &:nth-child(2) {
+        max-width: 100%;
+      }
+
+      &:nth-child(3) {
+        width: 70px;
+      }
+    }
+
+    a {
+      color: black;
+      font-weight: bold;
+      background-image: none;
+      background-color: var(--background-orders) !important;
+      text-decoration: none;
+      width: fit-content;
+
+      &:active {
+        color: black;
+        user-select: none;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-top: 2px solid black;
+    height: 65px;
+
+    .spacer {
+      width: 0;
+      height: 100%;
+      border-right: 2px solid black;
+    }
+
+    /* order button */
+    a {
+      text-decoration: none;
+      color: black;
+
+      background-color: rgb(108, 205, 237);
+      padding: 7px 20px;
+      border-radius: 10px;
+
+      &:active {
+        background-color: rgb(79, 190, 228);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    padding: 0;
+    max-width: 1000px;
+  }
+
+  .gerechten {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
