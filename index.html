@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food Trock</title>
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/header.css">
   <script src="script/header.js" async></script>
+  <script src="script/mapsSwitcher.js" async></script>
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div class="background-color">
       <div class="container">
-        <img src="images/logo.png" alt="logo food-trock">
-        
+        <a href="index.html"><img src="images/logo.png" alt="logo food-trock"></a>
+
         <div class="hamburger-menu-div">
           <label class="hamburger-menu">
-            <input type="checkbox" id="menu-toggle"/>
+            <input type="checkbox" id="menu-toggle" />
           </label>
         </div>
       </div>
@@ -27,58 +27,125 @@
           <li><a href="index.html">HOME</a></li>
           <li><a href="gerechten.html">GERECHTEN</a></li>
         </ul>
-      </nav>  
+      </nav>
     </div>
   </header>
-  
-  <section class="hero">
+
+  <section class="hero" id="hero">
     <div class="container">
-      
-      <h1>Food Trock</h1>
-      <h2>Viatnamese Loempia</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus eveniet obcaecati dicta, nemo aliquam
-        deserunt illum id quo cumque, nisi eius dolore. Facere voluptatem pariatur architecto, laudantium dolorem
-        praesentium ab commodi exercitationem, suscipit velit eum reprehenderit quam nesciunt atque quae quisquam
-        asperiores neque. Qui quis nemo facilis quas suscipit tempore inventore amet! Quae repudiandae quasi fugiat in,
-        necessitatibus excepturi repellat.</p>
-        
-        <img src="images/loempia.png" alt="Loempia voor hero">
+      <div class="text">
+        <h1>
+          NumNum<br>
+          <span>FoodTruck</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas vitae reiciendis, distinctio
+          pariatur
+          nesciunt non maiores voluptatum quibusdam magnam?</p>
       </div>
-      </section>
-      
-      <main class="intro">
-        <h2>Lorem, ipsum dolor.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque iusto, magni voluptates a, veritatis ullam minima
-          animi reprehenderit aliquid accusantium ratione ducimus sapiente qui quod dolorum blanditiis odio ipsa iure
-          laudantium repellendus eos. Corporis illum quae rerum aperiam officia architecto!</p>
-          
-          <hr>
-        </main>
+      <img src="images/loempia-hero.jpg" alt="Loempia voor hero">
+    </div>
+  </section>
+
+  <section class="section-gerechten" id="gerechten">
+    <div class="container">
+      <h2>Ons Assortiment</h2>
+
+      <div class="gerechten">
+        <div class="card">
+          <div class="gerecht loempia"></div>
+          <div class="titel">
+            Vietnamese loempia's
+          </div>
+          <div class="omschrijving">Vietnamese loempia's met chilisaus</div>
+        </div>
+
+        <div class="card">
+          <div class="gerecht vegetarische-loempia"></div>
+          <div class="titel">
+            Vegetarische loempia's
+          </div>
+          <div class="omschrijving">Loempia gevuld met verse groenten</div>
+        </div>
+
+        <div class="card extra">
+          <div class="gerecht banh-mi"></div>
+          <div class="titel">
+            Banh Mi
+          </div>
+          <div class="omschrijving">Vietnamees broodje met pittig vlees</div>
+        </div>
+      </div>
+
+      <div class="call-to-action-gerechten">
+        <p>Bestel voor 20:59 en haal het vandaag nog op</p>
+        <a href="gerechten.html">GERECHTEN</a>
+      </div>
+  </section>
+
 
   <section class="divider">
     <div class="background-image"></div>
   </section>
 
-  <section class="gerechten">
+  <section class="information" id="information">
+    <div class="information-title">
+    </div>
+    
     <div class="container">
-      <h2>gerechten</h2>
+      <div class="kaart">
+        <h2>Plek van vandaag:</h2>
+        
+      </div>
+      <div class="information-table">
+        <h2>Wekelijkse Schema:</h2>
+        <table>
+          <tr>
+            <th>Dag</th>
+            <th>Tijd</th>
+            <th>Locatie </th>
+          </tr>
+          <tr>
+            <td>Maandag</td>
+            <td>15:00 - 20.00</td>
+            <td>Jumbo,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Dinsdag</td>
+            <td>15:00 - 20.00</td>
+            <td>Jumbo,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Woensdag</td>
+            <td>15:00 - 20.00</td>
+            <td>Markt,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Donderdag</td>
+            <td>15:00 - 20.00</td>
+            <td>Jumbo,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Vrijdag</td>
+            <td>15:00 - 00.00</td>
+            <td>Jumbo,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Zaterdag</td>
+            <td>12:00 - 23.00</td>
+            <td>Markt,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Zondag</td>
+            <td>15:00 - 20.00</td>
+            <td>Markt,<br>Doetinchem</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <div class="left">
-        <img src="images/logo.png" alt="Logo food trock footer">
-        
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">Yoeptjoep</a>
-      </div>
-      <div class="right">
-        
-      </div>
-    </div>
-  </footer>
+  <section class="omhoog">
+    <a href="#header">⇑</a>
+  </section>w
 </body>
-
 </html>

@@ -20,15 +20,12 @@ document.querySelector('.items-table').addEventListener('click', function(event)
   if (event.target.classList.contains('delete')) {
     items.splice(items.lastIndexOf(event.target.classList[0]), 1);
     updateList(items);
-    console.log(event.target.classList[0]);
   }
 
   if (event.target.classList.contains('add')) {
     items.push(event.target.classList[0]);
     updateList(items);
   }
-
-  console.log(items);
 });
 
 function updateList(arr = []) {
@@ -40,6 +37,8 @@ function updateList(arr = []) {
   
   const items = document.querySelector('.items-table');
   items.innerHTML = '<tr><th>Aantal</th><th>Item</th><th>Prijs</th></tr>';
+  
+  console.log(counts);
   
   Object.entries(counts).forEach(([key, value]) => {
     const title = document.querySelector(`.${key}`).closest('.card').querySelector('.titel').innerHTML.trim();
@@ -66,8 +65,6 @@ function calculateTotalPrice(counts) {
   let price = 0;
   Object.entries(counts).forEach(([key, value]) => {
     const itemPrice = parseFloat(document.querySelector(`.${key}`).querySelector('.prijs').innerHTML.split(' ')[1]) * value;
-
-    console.log(itemPrice, value);
 
     price += itemPrice;
   });
