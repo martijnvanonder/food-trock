@@ -3,27 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Trock</title>
-  <link rel="stylesheet" href="style/foodCard.css">
+  <title>Gerechten | Food Trock</title>
+  <link rel="stylesheet" href="style/gerechten.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style/header.css">
   <script src="script/header.js" async></script>
+  <script src="script/addItem.js" async></script>
 </head>
 <body>
   <nav>
-    <div class="container">
+    <div class="container header-container">
       <img src="images/logo.png" alt="logo">
 
       <button class="hamburger" onclick="toggleMenu()">☰</button>
     </div>
     <ul class="menu" id="menu">
       <li><a href="index.html">Home</a></li>
-      <li><a href="foodCard.html">Gerechten</a></li>
-      <li><a href="#">Nog niks</a></li>
+      <li><a href="gerechten.html">Gerechten</a></li>
     </ul>
   </nav>
 
-  <section class="gerechten">
+  <section class="gerechten-titel">
+    <h1>Gerechten</h1>
+  </section>
+
+  <section class="gerechten container">
     <div class="card">
       <div class="gerecht loempia">
         <div class="prijs">€ 9.50</div>
@@ -31,7 +35,7 @@
           <div class="allergie ei"></div>
           <div class="allergie gluten"></div>
           <div class="allergie soja"></div>
-          <div class="allergie pinda"></div>
+          <!-- <div class="allergie pinda"></div> -->
         </div>
       </div>
       <div class="titel">
@@ -39,7 +43,7 @@
       </div>
       <div class="omschrijving">Heerlijke vietnamese loempia's met chilisaus</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="loempia" class="toevoegen">
       </div>
     </div>
 
@@ -50,7 +54,7 @@
           <div class="allergie ei"></div>
           <div class="allergie gluten"></div>
           <div class="allergie soja"></div>
-          <div class="allergie pinda"></div>
+          <!-- <div class="allergie pinda"></div> -->
         </div>
       </div>
       <div class="titel">
@@ -58,7 +62,7 @@
       </div>
       <div class="omschrijving">Loempia gevuld met verse groenten</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="vegetarische-loempia" class="toevoegen">
       </div>
     </div>
 
@@ -75,7 +79,7 @@
       </div>
       <div class="omschrijving">Vietnamees broodje met pittig vlees</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="banh-mi" class="toevoegen">
       </div>
     </div>
 
@@ -92,7 +96,7 @@
       </div>
       <div class="omschrijving">Gegrilde kipspiesjes met pindasaus</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="sate-kip" class="toevoegen">
       </div>
     </div>
 
@@ -108,7 +112,7 @@
       </div>
       <div class="omschrijving">Aromatische Vietnamese rundersoep</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="pho-bo" class="toevoegen">
       </div>
     </div>
 
@@ -125,7 +129,7 @@
       </div>
       <div class="omschrijving">Zacht broodje met zoet varkensvlees</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="bao-bun-varken" class="toevoegen">
       </div>
     </div>
 
@@ -143,7 +147,7 @@
       </div>
       <div class="omschrijving">Japanse gefrituurde kip met curry</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="katsu-chicken-curry" class="toevoegen">
       </div>
     </div>
 
@@ -160,7 +164,7 @@
       </div>
       <div class="omschrijving">Thaise noedels met garnalen en pinda’s</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="pad-thai-garnalen" class="toevoegen">
       </div>
     </div>
 
@@ -177,7 +181,7 @@
       </div>
       <div class="omschrijving">Pittige gebakken rijst met ei</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="kimchi-fried-rice" class="toevoegen">
       </div>
     </div>
 
@@ -194,7 +198,7 @@
       </div>
       <div class="omschrijving">Indonesische salade met pindasaus</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="gado-gado" class="toevoegen">
       </div>
     </div>
 
@@ -212,7 +216,7 @@
       </div>
       <div class="omschrijving">Japanse octopusballetjes</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="takoyaki" class="toevoegen">
       </div>
     </div>
 
@@ -229,7 +233,7 @@
       </div>
       <div class="omschrijving">Krokante kip met pittige saus</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="fried-chicken" class="toevoegen">
       </div>
     </div>
 
@@ -246,7 +250,7 @@
       </div>
       <div class="omschrijving">Gezonde bowl met rijst en groenten</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="tofu-bowl" class="toevoegen">
       </div>
     </div>
 
@@ -263,7 +267,7 @@
       </div>
       <div class="omschrijving">Gegrilde kipspiesjes met teriyakisaus</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="yakitori-spiesjes" class="toevoegen">
       </div>
     </div>
 
@@ -279,7 +283,7 @@
       </div>
       <div class="omschrijving">Langzaam gestoofd pittig rundvlees</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="rendang" class="toevoegen">
       </div>
     </div>
 
@@ -297,7 +301,7 @@
       </div>
       <div class="omschrijving">Gestoomde dumplings met kipvulling</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="dumplings-kip" class="toevoegen">
       </div>
     </div>
 
@@ -315,7 +319,7 @@
       </div>
       <div class="omschrijving">Hartige Japanse pannenkoek</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="okonomiyaki" class="toevoegen">
       </div>
     </div>
 
@@ -330,7 +334,7 @@
       </div>
       <div class="omschrijving">Knapperige frietjes van zoete aardappel</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="toevoegen" class="toevoegen">
       </div>
     </div>
 
@@ -345,7 +349,7 @@
       </div>
       <div class="omschrijving">Kleefrijst met mango en kokosmelk</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="zoete-aardappel" class="toevoegen">
       </div>
     </div>
 
@@ -361,42 +365,34 @@
       </div>
       <div class="omschrijving">Verfrissende thee met tapioca parels</div>
       <div class="knop">
-        <input type="button" value="Toevoegen aan bestellijst" id="toevoegen">
+        <input type="button" value="Toevoegen" id="bubble-tea" class="toevoegen">
       </div>
     </div>
-
-
-
   </section>
+
   <div class="toonExtra">
     <button id="toonMeer">Toon meer <i class="bi bi-caret-down"></i></button>
   </div>
-  <script>
-    document.querySelectorAll('#toevoegen').forEach(knop => {
-      knop.addEventListener('click', () => {
-        let origineleTekst = knop.value;
 
-        knop.value = "Toegevoegd!";
+  <section class="order">
+    <div class="container">
+      <!-- table with items -->
+      <div class="selected-items">
+        <table class="items-table">
+          <tr>
+            <th>Aantal</th>
+            <th>Item</th>
+            <th>Prijs</th>
+          </tr>
+        </table>
+      </div>
 
-        setTimeout(() => {
-          knop.value = origineleTekst;
-        }, 2000);
-      });
-    });
-
-    const toonMeerKnop = document.getElementById("toonMeer");
-    const cards = document.querySelectorAll('.card');
-    const cardsToToggle = Array.from(cards).slice(-14); // Neem de laatste 14 kaarten
-
-    toonMeerKnop.addEventListener("click", function () {
-      cardsToToggle.forEach(card => {
-        card.style.display = (card.style.display === "flex") ? "none" : "flex";
-      });
-
-      const allesZichtbaar = Array.from(cardsToToggle).some(card => card.style.display === "flex");
-      toonMeerKnop.innerHTML = allesZichtbaar ? 'Toon minder <i class="bi bi-caret-up"></i>' : 'Toon meer <i class="bi bi-caret-down"></i>';
-    });
-  </script>
+      <div class="bottom">
+        <p class="totaal-prijs">Totaalprijs: €-,--</p>
+        <p class="spacer"></p>
+        <a href="#" onclick="return false;">Bestellen -></a>
+      </div>
+    </div>
+  </section>
 </body>
-
 </html>
