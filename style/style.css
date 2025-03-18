@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import "header.css";
 
 :root {
-  --text-color: #333; 
-  --background-color: #f8f9fa; 
-  --accent-color: #B1E5F2;
+  --text-color: #333;
+  --background-color: #f8f9fa;
+  --accent-color: #b1e5f2;
 }
 
 * {
@@ -12,40 +14,135 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: var(--text-color); 
-  background-color: var(--background-color); 
-  height: 100vh; 
-  font-family: 'Roboto';
+  color: var(--text-color);
+  background-color: var(--background-color);
+  height: 100vh;
+  font-family: "Roboto";
   line-height: 1.6;
 }
 
-body > * {
-  padding: 0 20px;
-}
-
 section.hero {
-  background-color: var(--accent-color);
-  padding: 20px;
-  
+  background-color: lightblue;
+  text-align: center;
+
   h1 {
     font-size: 3em;
+    padding: 10px 0 0;
+    line-height: 0.4;
+    padding: 50px 0 20px;
+
+    span {
+      font-size: 0.4em;
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
   }
 
   img {
-    padding-top: 15px;
-    width: 100%;
+    margin: 15px 0 20px;
     object-fit: cover;
     border-radius: 5px;
+    width: 100%;
+    max-height: 350px;
   }
 }
 
-main.intro {
-  text-align: center;
-  margin: 20px 0;
+.section-gerechten {
+  background-color: #aaa;
+  padding: 10px 0 30px;
 
-  hr {
-    margin: 20px 10px;
+  h2 {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+  }
+
+  .call-to-action-gerechten {
+    padding: 30px 0 0 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 999px;
+
+    &:focus {
+      color: black;
+    }
+  }
+}
+
+.gerechten {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  .loempia {
+    background-image: url(../images/gerechten/loempia.jpg);
+  }
+  .vegetarische-loempia {
+    background-image: url(../images/gerechten/vegetarische\ loempias.jpg);
+  }
+  .banh-mi {
+    background-image: url(../images/gerechten/banh-mi.jpg);
+  }
+
+  .card {
+    transition: transform 200ms ease-in-out;
+    min-width: 0;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .titel,
+    .omschrijving {
+      padding: 6px 10px;
+      text-align: start;
+    }
+
+    .titel {
+      font-size: 1.15em;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    .gerecht {
+      display: flex;
+      height: 150px;
+      background-position: center;
+      background-size: cover;
+      border-radius: 10px 10px 0 0;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 10px;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .extra {
+    display: none;
   }
 }
 
@@ -54,16 +151,52 @@ section.divider {
 
   .background-image {
     height: 300px;
-    background-image: url(../images/divider.jpg);
+    background: url(../images/divider-mobile.jpg);
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    background-position-x: -400px;
   }
 }
 
-section.gerechten {
-  height: 500px;
-  background-color: gray;
+section.information {
+  background: lightblue;
+  padding: 20px 0;
+  text-align: center;
+
+  .kaart {
+    margin-bottom: 30px;
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .information-table table {
+    border-collapse: collapse;
+    font-size: 0.8em;
+    margin: 0 auto;
+    white-space: nowrap;
+    width: 100%;
+
+    td,
+    th {
+      padding: 0 5px;
+      text-align: center;
+    }
+
+    tr {
+      width: 100%;
+      transition: background 200ms ease-in-out;
+
+      &:hover:not(tr:first-child) {
+        background: rgba(0, 0, 0, 0.04);
+      }
+    }
+  }
 }
 
 footer {
@@ -83,4 +216,89 @@ footer {
       width: 50%;
     }
   } */
+}
+
+.omhoog {
+  height: 100px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: black;
+    text-decoration: none;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 99px;
+    transition: color 200ms ease-in-out, background 200ms ease-in-out;
+
+    &:hover {
+      color: white;
+      background: #777;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  section.information {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 20px;
+
+      .kaart {
+        height: 100%;
+        margin: 0;
+      }
+
+      iframe {
+        height: calc(100% - 50px);
+      }
+    }
+  }
+
+  section.hero {
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 40px;
+      align-items: center;
+
+      .text {
+        font-size: 1.2em;
+
+        .p {
+          margin: 20px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+    .section-gerechten {
+    .gerechten {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .extra {
+      display: block;
+    }
+  }
+
+  section.divider .background-image {
+    height: 300px;
+    background: url(../images/divider-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .inforamtion {
+    .kaart {
+      margin: 0;
+    }
+  }
 }

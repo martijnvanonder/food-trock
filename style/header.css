@@ -1,6 +1,46 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #333;
+}
+
+body {
+  margin: 0;
+}
+
 :root {
-  --text-color: #333; 
-  --background-color: #f8f9fa; 
+  --bar-width: 40px;
+  --bar-height: 7px;
+  --hamburger-gap: 7px;
+  --foreground: #333;
+  --background: white;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+header {
+  background-color: #333;
+}
+
+.background-color {
+  background-color: var(--foreground);
+  padding: 20px 0;
+  
+  .container:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img {
+    height: 40px;
+    filter: invert(1);
+  }
 }
 
 .container {
@@ -8,55 +48,141 @@
   margin: 0 auto;
 }
 
-nav {
-  background-color: var(--text-color);
-  color: var(--background-color);
-  padding: 20px 0;
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  img {
-    height: 40px;
-  }
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  padding: 5px 5px 5px 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: auto;
+  z-index: 2;
+  cursor: pointer;
 
-  .menu {
-    display: none;
+  transform: scale(-1, 1); 
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--background);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar {
+  color: var(--background);
+  overflow: hidden; 
+  padding: 0;
+  margin: 0;
+  transition: height var(--animation-timing);
+  height: 0; 
+  margin: 0 auto;
+  
+  ul {
     list-style: none;
-    background: #333;
-    color: white;
     width: 100%;
-    padding-top: 20px;
-    transition: 0.4s;
+    padding: 0;
+    margin: 0;
+    align-self: flex-start;
+  }
 
+  li {
+    text-align: center;
+    
     a {
-      color: var(--background-color);
+      display: block;
+      padding: 10px;
+      width: 100%;
+      color: white;
       text-decoration: none;
 
-      &:hover {
-        color: var(--background-color);
+      &:active {
+        background-color: #484747;
       }
     }
-    
-    li {
-      padding: 10px;
-      border-bottom: 1px solid rgb(160, 160, 160);
-      text-align: center;
-
-      &:hover {
-        background-color: #555;
-      }
-    }
-  }
-
-  .hamburger {
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
   }
 }
+
+.is-active {
+  height: 80px;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    padding: 0 20px;
+    max-width: 1000px;
+  }
+
+  .hamburger-menu-div {
+    display: none;
+  }
+
+  .sidebar {
+    overflow: visible;
+
+    ul {
+      display: flex;
+      gap: 30px;
+      align-self: auto;
+    }
+
+    li {
+      width: fit-content;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .background-color {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+
+    .container:first-child {
+      padding: 0 20px;
+      width: 1000px;
+    }
+  }
+}
+
+

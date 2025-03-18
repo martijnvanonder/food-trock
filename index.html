@@ -6,105 +6,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food Trock</title>
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/header.css">
-  <link rel="stylesheet" href="style/contact.css">
   <script src="script/header.js" async></script>
+  <script src="script/mapsSwitcher.js" async></script>
 </head>
 
 <body>
-  <nav>
-    <div class="container header-container">
-      <img src="images/logo.png" alt="logo">
+  <header id="header">
+    <div class="background-color">
+      <div class="container">
+        <a href="index.html"><img src="images/logo.png" alt="logo food-trock"></a>
 
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <div class="hamburger-menu-div">
+          <label class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle" />
+          </label>
+        </div>
+      </div>
+      <nav class="sidebar container">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="gerechten.html">GERECHTEN</a></li>
+        </ul>
+      </nav>
     </div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gerechten.html">Gerechten</a></li>
-    </ul>
-  </nav>
+  </header>
 
-  <section class="hero">
-    <h1>Food Trock</h1>
-    <h2>Viatnamese Loempia</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus eveniet obcaecati dicta, nemo aliquam
-      deserunt illum id quo cumque, nisi eius dolore. Facere voluptatem pariatur architecto, laudantium dolorem
-      praesentium ab commodi exercitationem, suscipit velit eum reprehenderit quam nesciunt atque quae quisquam
-      asperiores neque. Qui quis nemo facilis quas suscipit tempore inventore amet! Quae repudiandae quasi fugiat in,
-      necessitatibus excepturi repellat.</p>
-
-    <img src="images/loempia.png" alt="Loempia voor hero">
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="text">
+        <h1>
+          NumNum<br>
+          <span>FoodTruck</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas vitae reiciendis, distinctio
+          pariatur
+          nesciunt non maiores voluptatum quibusdam magnam?</p>
+      </div>
+      <img src="images/loempia-hero.jpg" alt="Loempia voor hero">
+    </div>
   </section>
 
-  <main class="intro">
-    <h2>Lorem, ipsum dolor.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque iusto, magni voluptates a, veritatis ullam minima
-      animi reprehenderit aliquid accusantium ratione ducimus sapiente qui quod dolorum blanditiis odio ipsa iure
-      laudantium repellendus eos. Corporis illum quae rerum aperiam officia architecto!</p>
+  <section class="section-gerechten" id="gerechten">
+    <div class="container">
+      <h2>Ons Assortiment</h2>
 
-    <hr>
-  </main>
+      <div class="gerechten">
+        <div class="card">
+          <div class="gerecht loempia"></div>
+          <div class="titel">
+            Vietnamese loempia's
+          </div>
+          <div class="omschrijving">Vietnamese loempia's met chilisaus</div>
+        </div>
+
+        <div class="card">
+          <div class="gerecht vegetarische-loempia"></div>
+          <div class="titel">
+            Vegetarische loempia's
+          </div>
+          <div class="omschrijving">Loempia gevuld met verse groenten</div>
+        </div>
+
+        <div class="card extra">
+          <div class="gerecht banh-mi"></div>
+          <div class="titel">
+            Banh Mi
+          </div>
+          <div class="omschrijving">Vietnamees broodje met pittig vlees</div>
+        </div>
+      </div>
+
+      <div class="call-to-action-gerechten">
+        <p>Bestel voor 20:59 en haal het vandaag nog op</p>
+        <a href="gerechten.html">GERECHTEN</a>
+      </div>
+  </section>
+
 
   <section class="divider">
     <div class="background-image"></div>
   </section>
 
-  <section class="gerechten">
-    <h2>gerechten</h2>
+  <section class="information" id="information">
+    <div class="information-title">
+    </div>
+    
+    <div class="container">
+      <div class="kaart">
+        <h2>Plek van vandaag:</h2>
+        
+      </div>
+      <div class="information-table">
+        <h2>Wekelijkse Schema:</h2>
+        <table>
+          <tr>
+            <th>Dag</th>
+            <th>Tijd</th>
+            <th>Locatie </th>
+          </tr>
+          <tr>
+            <td>Maandag</td>
+            <td>15:00 - 20.00</td>
+            <td>Jumbo,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Dinsdag</td>
+            <td>15:00 - 20.00</td>
+            <td>Jumbo,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Woensdag</td>
+            <td>15:00 - 20.00</td>
+            <td>Markt,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Donderdag</td>
+            <td>15:00 - 20.00</td>
+            <td>Jumbo,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Vrijdag</td>
+            <td>15:00 - 00.00</td>
+            <td>Jumbo,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Zaterdag</td>
+            <td>12:00 - 23.00</td>
+            <td>Markt,<br>Doetinchem</td>
+          </tr>
+          <tr>
+            <td>Zondag</td>
+            <td>15:00 - 20.00</td>
+            <td>Markt,<br>Doetinchem</td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <div class="kaart">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1430.8695531369656!2d6.292054606460481!3d51.96300895982414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1snl!2snl!4v1741686861413!5m2!1snl!2snl"
-        width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="informatie">
-      <table >
-        <tr>
-          <th>Dag</th>
-          <th>Tijd</th>
-          <th>Locatie </th>
-        </tr>
-        <tr>
-          <td>Maandag</td>
-          <td>15:00 - 20.00</td>
-          <td>Kantoren, Doetinchem</td>
-        </tr>
-        <tr>
-          <td>Dinsdag</td>
-          <td>15:00 - 20.00</td>
-          <td>Kantoren, Doetinchem</td>
-        </tr>
-        <tr>
-          <td>Woensdag</td>
-          <td>15:00 - 20.00</td>
-          <td>Markt, Doetinchem</td>
-        </tr>
-        <tr>
-          <td>Donderdag</td>
-          <td>15:00 - 20.00</td>
-          <td>Kantoren, Doetinchem</td>
-        </tr>
-        <tr>
-          <td>Vrijdag</td>
-          <td>15:00 - 00.00</td>
-          <td>Kantoren, Doetinchem</td>
-        </tr>
-        <tr>
-          <td>Zaterdag</td>
-          <td>12:00 - 23.00</td>
-          <td>Markt, Doetinchem</td>
-        </tr>
-        <tr>
-          <td>Zondag</td>
-          <td>15:00 - 20.00</td>
-          <td>Markt, Doetinchem</td>
-        </tr>
-      </table>
-    </div>
-  </footer>
+  <section class="omhoog">
+    <a href="#header">⇑</a>
+  </section>w
 </body>
 
 </html>

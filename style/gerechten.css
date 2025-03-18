@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+@import 'header.css';
+
 :root {
   --background-orders: #aaa;
 }
@@ -126,101 +128,101 @@ section.gerechten-titel h1 {
   margin: 0 30px;
 }
 
-.loempia {
+.card .loempia {
   background-image: url(../images/gerechten/loempia.jpg);
 }
-.vegetarische-loempia {
+.card .vegetarische-loempia {
   background-image: url(../images/gerechten/vegetarische\ loempias.jpg);
 }
-.banh-mi {
+.card .banh-mi {
   background-image: url(../images/gerechten/banh-mi.jpg);
 }
-.sate-kip {
+.card .sate-kip {
   background-image: url(../images/gerechten/sateKip.jpg);
 }
-.pho-bo {
+.card .pho-bo {
   background-image: url(../images/gerechten/pho-bo.jpg);
 }
-.bao-bun-varken {
+.card .bao-bun-varken {
   background-image: url(../images/gerechten/bao-bun-varken.jpg);
 }
-.katsu-chicken-curry {
+.card .katsu-chicken-curry {
   background-image: url(../images/gerechten/katsu-curry.jpg);
 }
-.pad-thai-garnalen {
+.card .pad-thai-garnalen {
   background-image: url(../images/gerechten/pad-thai.jpg);
 }
-.kimchi-fried-rice {
+.card .kimchi-fried-rice {
   background-image: url(../images/gerechten/kimchi.jpg);
 }
-.gado-gado {
+.card .gado-gado {
   background-image: url(../images/gerechten/gadoGado.jpg);
 }
-.takoyaki {
+.card .takoyaki {
   background-image: url(../images/gerechten/takoyaki.webp);
 }
-.fried-chicken {
+.card .fried-chicken {
   background-image: url(../images/gerechten/fried-chicken.jpg);
 }
-.tofu-bowl {
+.card .tofu-bowl {
   background-image: url(../images/gerechten/tofu-bowl.jpg);
 }
-.yakitori-spiesjes {
+.card .yakitori-spiesjes {
   background-image: url(../images/gerechten/yakitori-spiesjes.jpg);
 }
-.rendang {
+.card .rendang {
   background-image: url(../images/gerechten/rendang.webp);
 }
-.dumplings-kip {
+.card .dumplings-kip {
   background-image: url(../images/gerechten/gyoza-kip.jpg);
 }
-.okonomiyaki {
+.card .okonomiyaki {
   background-image: url(../images/gerechten/Okonomiyaki.jpg);
 }
-.zoete-aardappel {
+.card .zoete-aardappel {
   background-image: url(../images/gerechten/zoete-aardappel.webp);
 }
-.mango-sticky {
+.card .mango-sticky {
   background-image: url(../images/gerechten/Mango\ Sticky\ Rice.jpg);
 }
-.bubble-tea {
+.card .bubble-tea {
   background-image: url(../images/gerechten/milkybobatea_thumbnail.jpg);
 }
 
-.ei {
+.card .ei {
   background-image: url(../images/allergenen/ei.png);
 }
-.gluten {
+.card .gluten {
   background-image: url(../images/allergenen/gluten.png);
 }
-.lupine {
+.card .lupine {
   background-image: url(../images/allergenen/lupine.png);
 }
-.melk {
+.card .melk {
   background-image: url(../images/allergenen/melk.png);
 }
-.mosterd {
+.card .mosterd {
   background-image: url(../images/allergenen/mosterd.png);
 }
-.noten {
+.card .noten {
   background-image: url(../images/allergenen/noten.png);
 }
-.pinda {
+.card .pinda {
   background-image: url(../images/allergenen/pinda.png);
 }
-.schaaldieren {
+.card .schaaldieren {
   background-image: url(../images/allergenen/schaaldieren.png);
 }
-.selderij {
+.card .selderij {
   background-image: url(../images/allergenen/selderij.png);
 }
-.sesam {
+.card .sesam {
   background-image: url(../images/allergenen/sesamzaad.png);
 }
-.soja {
+.card .soja {
   background-image: url(../images/allergenen/soja.png);
 }
-.vis {
+.card .vis {
   background-image: url(../images/allergenen/vis.png);
 }
 
@@ -257,13 +259,12 @@ section.gerechten-titel h1 {
 
     tr > td:first-child {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
 
       & > span {
         width: 30px;
         display: flex;
         justify-content: space-between;
-        margin: 0 auto;
       }
     }
 
@@ -289,6 +290,7 @@ section.gerechten-titel h1 {
       background-color: var(--background-orders) !important;
       text-decoration: none;
       width: fit-content;
+      padding: 0 10px;
 
       &:active {
         color: black;
@@ -328,11 +330,6 @@ section.gerechten-titel h1 {
 }
 
 @media screen and (min-width: 1000px) {
-  .container {
-    padding: 0;
-    max-width: 1000px;
-  }
-
   .gerechten {
     grid-template-columns: repeat(3, 1fr);
   }

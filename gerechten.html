@@ -6,22 +6,29 @@
   <title>Gerechten | Food Trock</title>
   <link rel="stylesheet" href="style/gerechten.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="style/header.css">
   <script src="script/header.js" async></script>
   <script src="script/addItem.js" async></script>
 </head>
 <body>
-  <nav>
-    <div class="container header-container">
-      <img src="images/logo.png" alt="logo">
-
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <header>
+    <div class="background-color">
+      <div class="container">
+        <a href="index.html"><img src="images/logo.png" alt="logo food-trock"></a>
+        
+        <div class="hamburger-menu-div">
+          <label class="hamburger-menu">
+            <input type="checkbox" id="menu-toggle"/>
+          </label>
+        </div>
+      </div>
+      <nav class="sidebar container">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="gerechten.html">GERECHTEN</a></li>
+        </ul>
+      </nav>  
     </div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gerechten.html">Gerechten</a></li>
-    </ul>
-  </nav>
+  </header>
 
   <section class="gerechten-titel">
     <h1>Gerechten</h1>
@@ -41,7 +48,7 @@
       <div class="titel">
         Vietnamese loempia's
       </div>
-      <div class="omschrijving">Heerlijke vietnamese loempia's met chilisaus</div>
+      <div class="omschrijving">Vietnamese loempia's met chilisaus</div>
       <div class="knop">
         <input type="button" value="Toevoegen" id="loempia" class="toevoegen">
       </div>
