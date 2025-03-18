@@ -1,18 +1,19 @@
 const items = [];
+const toeveogenKnopText = document.querySelector('.toevoegen').value;
 
 document.querySelectorAll('.toevoegen').forEach(knop => {
-  knop.addEventListener('click', async function() {
+  knop.addEventListener('click', function() {
     const id = this.id;    
-    
+
     items.push(id);
     updateList(items);
     
-    let origineleTekst = knop.value;
-    knop.value = "Toegevoegd!";
-    
-    setTimeout(() => {
-      knop.value = origineleTekst;
-    }, 2000);
+    if (knop.value == toeveogenKnopText) {
+      knop.value = 'Toegevoegd!';
+      setTimeout(() => {
+        knop.value = toeveogenKnopText;
+      }, 2000);
+    }
   })
 })
 
