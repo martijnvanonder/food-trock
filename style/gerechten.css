@@ -50,9 +50,9 @@ section.gerechten-titel h1 {
 
 .card {
   min-width: 0;
-  border-radius: 10px;
+  border-radius: 7px;
   background: white;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .6);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@ section.gerechten-titel h1 {
     height: 150px;
     background-position: center;
     background-size: cover;
-    border-radius: 10px 10px 0 0;
+    border-radius: 7px 7px 0 0;
     justify-content: space-between;
     align-items: flex-end;
     padding: 10px;
@@ -85,10 +85,10 @@ section.gerechten-titel h1 {
       background-color: white;
       padding: 5px 7px;
       border-radius: 50px;
-      box-shadow: 0 0 10px black;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .6);
       align-self: flex-start;
       white-space: nowrap;
-    }
+    } 
 
     .allergenen {
       gap: 7px;
@@ -110,7 +110,7 @@ section.gerechten-titel h1 {
     padding: 3px 6px;
     font-weight: bold;
     margin: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     width: calc(100% - 10px);
     padding: 5px;
 
@@ -122,10 +122,14 @@ section.gerechten-titel h1 {
 
 #toonMeer {
   color: white;
-  background-color: black;
+  background-color: #222;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 999px;
   margin: 0 30px;
+
+  &:active {
+    background: #333;
+  }
 }
 
 .card .loempia {
