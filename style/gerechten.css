@@ -73,6 +73,7 @@ section.gerechten-titel h1 {
   .gerecht {
     display: flex;
     height: 150px;
+    flex-direction: column;
     background-position: center;
     background-size: cover;
     border-radius: 7px 7px 0 0;
