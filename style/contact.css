@@ -1,0 +1,20 @@
+.kaart{
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+}
+.informatie{
+  color: white;
+
+  table{
+    border-collapse: collapse;
+    width: 350px;
+
+    tr > *{
+      border: 5px transparent solid;   
+    }
+    th{
+      text-align: start;
+    }  
+  }
+}
