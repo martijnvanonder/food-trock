@@ -25,7 +25,8 @@ body:not("nav") {
   font-size: 0.8em;
 }
 
-input, #toonMeer {
+input,
+#toonMeer {
   border: none;
 
   &:focus {
@@ -34,10 +35,10 @@ input, #toonMeer {
 }
 
 section.gerechten-titel h1 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 4.5em;
   text-align: center;
-  margin: 20px 0 ;
+  margin: 20px 0;
 }
 
 .gerechten {
@@ -89,7 +90,7 @@ section.gerechten-titel h1 {
       box-shadow: 0 0 15px rgba(0, 0, 0, .6);
       align-self: flex-start;
       white-space: nowrap;
-    } 
+    }
 
     .allergenen {
       gap: 7px;
@@ -121,6 +122,39 @@ section.gerechten-titel h1 {
   }
 }
 
+.allergenen {
+  h2{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  h4 {
+    margin: 30px 0;
+    font-size: 20px;
+  }
+
+  .allergenen-legenda {
+    margin: 10px 0 10px 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    .allergie-tekst {
+      display: flex;
+      align-items: center;
+      margin: 5px;
+      font-weight: 500;
+    }
+
+    img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+  }
+}
+
 #toonMeer {
   color: white;
   background-color: #222;
@@ -136,60 +170,79 @@ section.gerechten-titel h1 {
 .card .loempia {
   background-image: url(../images/gerechten/loempia.jpg);
 }
+
 .card .vegetarische-loempia {
   background-image: url(../images/gerechten/vegetarische\ loempias.jpg);
 }
+
 .card .banh-mi {
   background-image: url(../images/gerechten/banh-mi.jpg);
 }
+
 .card .sate-kip {
   background-image: url(../images/gerechten/sateKip.jpg);
 }
+
 .card .pho-bo {
   background-image: url(../images/gerechten/pho-bo.jpg);
 }
+
 .card .bao-bun-varken {
   background-image: url(../images/gerechten/bao-bun-varken.jpg);
 }
+
 .card .katsu-chicken-curry {
   background-image: url(../images/gerechten/katsu-curry.jpg);
 }
+
 .card .pad-thai-garnalen {
   background-image: url(../images/gerechten/pad-thai.jpg);
 }
+
 .card .kimchi-fried-rice {
   background-image: url(../images/gerechten/kimchi.jpg);
 }
+
 .card .gado-gado {
   background-image: url(../images/gerechten/gadoGado.jpg);
 }
+
 .card .takoyaki {
   background-image: url(../images/gerechten/takoyaki.webp);
 }
+
 .card .fried-chicken {
   background-image: url(../images/gerechten/fried-chicken.jpg);
 }
+
 .card .tofu-bowl {
   background-image: url(../images/gerechten/tofu-bowl.jpg);
 }
+
 .card .yakitori-spiesjes {
   background-image: url(../images/gerechten/yakitori-spiesjes.jpg);
 }
+
 .card .rendang {
   background-image: url(../images/gerechten/rendang.webp);
 }
+
 .card .dumplings-kip {
   background-image: url(../images/gerechten/gyoza-kip.jpg);
 }
+
 .card .okonomiyaki {
   background-image: url(../images/gerechten/Okonomiyaki.jpg);
 }
+
 .card .zoete-aardappel {
   background-image: url(../images/gerechten/zoete-aardappel.webp);
 }
+
 .card .mango-sticky {
   background-image: url(../images/gerechten/Mango\ Sticky\ Rice.jpg);
 }
+
 .card .bubble-tea {
   background-image: url(../images/gerechten/milkybobatea_thumbnail.jpg);
 }
@@ -197,36 +250,31 @@ section.gerechten-titel h1 {
 .card .ei {
   background-image: url(../images/allergenen/ei.png);
 }
+
 .card .gluten {
   background-image: url(../images/allergenen/gluten.png);
 }
-.card .lupine {
-  background-image: url(../images/allergenen/lupine.png);
-}
+
 .card .melk {
   background-image: url(../images/allergenen/melk.png);
 }
-.card .mosterd {
-  background-image: url(../images/allergenen/mosterd.png);
-}
-.card .noten {
-  background-image: url(../images/allergenen/noten.png);
-}
+
 .card .pinda {
   background-image: url(../images/allergenen/pinda.png);
 }
+
 .card .schaaldieren {
   background-image: url(../images/allergenen/schaaldieren.png);
 }
-.card .selderij {
-  background-image: url(../images/allergenen/selderij.png);
-}
+
 .card .sesam {
   background-image: url(../images/allergenen/sesamzaad.png);
 }
+
 .card .soja {
   background-image: url(../images/allergenen/soja.png);
 }
+
 .card .vis {
   background-image: url(../images/allergenen/vis.png);
 }
@@ -262,11 +310,11 @@ section.gerechten-titel h1 {
       background-color: var(--background-orders);
     }
 
-    tr > td:first-child {
+    tr>td:first-child {
       display: flex;
       justify-content: flex-start;
 
-      & > span {
+      &>span {
         width: 30px;
         display: flex;
         justify-content: space-between;
@@ -275,6 +323,7 @@ section.gerechten-titel h1 {
 
     th {
       text-align: start;
+
       &:first-child {
         width: 70px;
       }
