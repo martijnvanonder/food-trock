@@ -87,14 +87,18 @@ button#bestellen {
     text-decoration: none;
   }
 }
-/* 
+
 @media screen and (max-width: 800px) {
+  form {
+    width: auto;
+  }
   .gegevens {
     flex-direction: column;
   }
 
-  select, input {
-    width: 100%;
+  #bestellen {
+    margin-top: 10px;
+    width: 250px;
   }
 
-} */
+}
