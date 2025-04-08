@@ -39,7 +39,7 @@ input:not(button#bestellen), select {
   border: none;
   outline: none;
   border-radius: 10px;
-  width: 300px;
+  width: 250px;
   
   &:focus {
     border: none;
@@ -87,3 +87,14 @@ button#bestellen {
     text-decoration: none;
   }
 }
+/* 
+@media screen and (max-width: 800px) {
+  .gegevens {
+    flex-direction: column;
+  }
+
+  select, input {
+    width: 100%;
+  }
+
+} */
