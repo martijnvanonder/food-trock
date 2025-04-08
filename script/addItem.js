@@ -1,5 +1,6 @@
 const items = [];
 const toeveogenKnopText = document.querySelector('.toevoegen').value;
+let totaalPrijs = 0;
 
 document.querySelectorAll('.toevoegen').forEach(knop => {
   knop.addEventListener('click', function() {
@@ -39,8 +40,6 @@ function updateList(arr = []) {
   const items = document.querySelector('.items-table');
   items.innerHTML = '<tr><th>Aantal</th><th>Item</th><th>Prijs</th></tr>';
   
-  console.log(counts);
-  
   Object.entries(counts).forEach(([key, value]) => {
     const title = document.querySelector(`.${key}`).closest('.card').querySelector('.titel').innerHTML.trim();
     const prijs = parseFloat(document.querySelector(`.${key}`).querySelector('.prijs').innerHTML.split(' ')[1]) * value;
@@ -53,10 +52,9 @@ function updateList(arr = []) {
 
     tr.innerHTML = `<td>${value}x <span>${addLink} ${deleteLink}</span></td> <td>${title}</td> <td>€ ${prijs.toFixed(2)}</td>`;
     items.appendChild(tr);
-
   });
 
-  const totaalPrijs = calculateTotalPrice(counts);
+  totaalPrijs = calculateTotalPrice(counts);
   document.querySelector('.totaal-prijs').innerHTML = `Totaalprijs: €${totaalPrijs}`;
 }
 
@@ -85,4 +83,15 @@ toonMeerKnop.addEventListener("click", function () {
 
   const allesZichtbaar = Array.from(cardsToToggle).some(card => card.style.display === "flex");
   toonMeerKnop.innerHTML = allesZichtbaar ? 'Toon minder <i class="bi bi-caret-up"></i>' : 'Toon meer <i class="bi bi-caret-down"></i>';
+});
+
+// bestellen knop
+document.querySelector('#bestellen').addEventListener('click', () => {
+  if (items.length == 0)
+    return false;
+
+  sessionStorage.setItem('producten', items.sort());
+  sessionStorage.setItem('prijs', totaalPrijs);
+
+  window.location.href = "bestellen.html";
 });

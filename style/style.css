@@ -26,6 +26,12 @@ body {
   line-height: 1.6;
 }
 
+section.isBesteld {
+  background: #ddd;
+  display: none;
+  text-align: center;
+}
+
 section.hero {
   background-color: lightblue;
   text-align: center;

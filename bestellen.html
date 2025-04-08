@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NumNumn | Bestellen</title>
+  <script src="script/bestellen.js" async></script>
+  <link rel="stylesheet" href="style/bestellen.css">
+</head>
+
+<body>
+
+  <!-- Gegevens -->
+  <div class="container">
+    <form method="post">
+      <div class="gegevens">
+        <label for="naam">Naam</label>
+        <input type="text" name="naam" id="naam">
+      </div>
+
+      <div class="gegevens">
+        <label for="phone">Telefoon</label>
+        <input type="text" name="phone" id="phone">
+      </div>
+      
+      <div class="gegevens">
+        <label for="tijd">Tijd</label>
+        <select name="tijd" id="tijd"></select>
+      </div>
+
+      <p id="error" class="error"></p>
+
+      <button id="bestellen" onclick="return false;">Bestellen -></button>
+    </form>
+
+    <!-- gelukt schrempje -->
+    <div id="gelukt">
+      <h2>De bestelling is gelukt!</h2>
+      <h2 id="geluktNummer"></h2>
+      <h2 id="geluktNaam"></h2>
+
+      <a href="index.html">Terug naam homepagina -></a>
+    </div>
+  </div>
+</body>
+
+</html>
